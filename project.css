@@ -1,0 +1,97 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* prevents horizontal scroll */
+    font-family: v, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+header {
+    position:fixed;
+    width: 100%;
+    display: flex;
+    z-index: 1000;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  /* Wrapper for each photo + text */
+  .photo-container {
+    position: relative; /* allows text to overlay image */
+    width: 100%;
+  }
+  
+  /* Make images responsive */
+  .photo-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Overlay text on top of image */
+  .overlay-text {
+    position: absolute;
+    top: 20px;       /* distance from bottom of image */
+    left: 50%;    
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    z-index: 200;
+    text-transform: uppercase;
+  }
+
+  .overlay-text::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;                  /* slightly wider than text */
+    height: 150%;                  /* controls oval height */
+    transform: translate(-50%, -50%);
+    border-radius: 50% / 50%;     /* makes an oval */
+    background: radial-gradient(circle, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(255, 255, 255, 1) 50%, 
+    rgba(215, 207, 200, 0) 100%);
+    filter: blur(10px); 
+    z-index: -1;                   /* behind the text */
+  }
+  
+footer {
+    font-family: vbold;
+    position:fixed;
+    height: 15%;
+    bottom: 0; 
+    width: 100%;
+    display: flex;
+    z-index: 1001;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 40px;
+    color:rgb(225, 225, 225);
+    filter: blur(4px);
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.nav-btn {
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;      /* remove underline */
+    transition: all 0.3s ease;
+    font-size: 14px;
+    padding: 15px;
+  }
+  
+  .nav-btn:hover {
+    transform: scale(1.05);
+  }

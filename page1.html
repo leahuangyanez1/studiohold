@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>home</title>
+  <link rel="stylesheet" href="project.css">
+
+  <style>
+
+.overlay {
+  position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-image: radial-gradient(circle, 
+        rgba(252, 248, 244, 0) 80%,  
+        rgba(255, 255, 255, 0.7) 90%, 
+        rgb(255, 255, 255) 95%);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 900;
+    pointer-events: none;
+  }
+
+  /* Disable any default fixed background layer if it exists */
+  .page-fixed-bg-container {
+    display: none !important;
+  }
+
+    @font-face {
+      font-family: v;
+      src: url(v.otf);
+    }
+
+    @font-face {
+      font-family: vbold;
+      src: url(vbold.otf);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="about.html" class="nav-btn">ABOUT</a>
+    <a href="https://www.instagram.com/studio__hold/" class="nav-btn">INSTAGRAM</a>
+  </header>
+
+  <div class="overlay"></div>
+
+  <div class="main page">
+    <div class="photo-container">
+      <a href="page1.html"><img src="photos/p1.webp" alt="Image 1"></a>
+      <div class="overlay-text">Guilty, guilty, guilty • Visual identity • 2021/25</div>
+    </div>
+</div>
+
+  <footer>
+    <h1>studio</h1>
+    <h1>hold</h1>
+  </footer>
+
+</body>
+</html>
