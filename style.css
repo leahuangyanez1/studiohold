@@ -32,6 +32,7 @@ header {
   /* Make images responsive */
   .photo-container img {
     width: 100%;
+    max-height: 100vh;
     height: auto;
     display: block;
   }
@@ -48,6 +49,12 @@ header {
     border-radius: 5px;
     z-index: 200;
     text-transform: uppercase;
+    text-align: center;
+  }
+
+    .proj-descr {
+      text-transform: lowercase;
+      width: 500px;
   }
 
   .overlay-text::before {

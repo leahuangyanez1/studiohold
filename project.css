@@ -38,7 +38,7 @@ header {
   
   /* Overlay text on top of image */
   .overlay-text {
-    position: absolute;
+    position: fixed;
     top: 20px;       /* distance from bottom of image */
     left: 50%;    
     transform: translateX(-50%);
@@ -48,6 +48,7 @@ header {
     border-radius: 5px;
     z-index: 200;
     text-transform: uppercase;
+    text-align: center;
   }
 
   .overlay-text::before {
@@ -95,3 +96,19 @@ footer {
   .nav-btn:hover {
     transform: scale(1.05);
   }
+
+  .proj-descr {
+    text-transform: lowercase;
+    width: 500px;
+}
+
+a {
+  all: unset;
+}
+
+.logo {
+  position: absolute;
+  right:20px;
+  display: flex;
+  flex-direction: row;
+}
